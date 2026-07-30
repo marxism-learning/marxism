@@ -1,0 +1,115 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>在线阅读 - 马克思主义学习知识库</title>
+    <style>
+        @font-face {
+            font-family: 'STZhongsong';
+            src: local('华文中宋'), local('STZhongsong');
+        }
+        body {
+            font-family: 'STZhongsong', '华文中宋', 'SimSun', '宋体', serif;
+            margin: 0;
+            padding: 0;
+            background-color: #fff8e1;
+        }
+        .hero-section {
+            background-image: url('images/leaders.png');
+            background-size: cover;
+            background-position: center 20%;
+            background-repeat: no-repeat;
+            position: relative;
+            overflow: hidden;
+        }
+        .hero-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, rgba(198, 40, 40, 0.85) 0%, rgba(211, 47, 47, 0.9) 100%);
+            z-index: 0;
+        }
+        .toolbar {
+            position: relative;
+            z-index: 1;
+            color: #ffd54f;
+            padding: 10px 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .toolbar h2 {
+            margin: 0;
+            font-size: 1.1em;
+            color: #ffd54f;
+            max-width: 50%;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        .toolbar .back-btn {
+            color: #ffd54f;
+            font-weight: bold;
+            padding: 4px 12px;
+            border: 1px solid #ffd54f;
+            border-radius: 4px;
+            cursor: pointer;
+            text-decoration: none;
+        }
+        .toolbar .back-btn:hover {
+            background: rgba(255,255,255,0.2);
+            color: #fff;
+        }
+        #pdf-frame {
+            width: 100%;
+            height: calc(100vh - 52px);
+            border: none;
+            display: block;
+        }
+    </style>
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?3ff5335154d5fb31adb0732f8726eb63";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+</head>
+<body>
+    <div class="hero-section">
+        <div class="toolbar">
+            <span class="back-btn" onclick="goBack()">← 返回</span>
+            <h2 id="book-title">在线阅读</h2>
+            <div></div>
+        </div>
+    </div>
+    <iframe id="pdf-frame" src=""></iframe>
+
+    <script>
+        var urlParams = new URLSearchParams(window.location.search);
+        var pdfUrl = urlParams.get('file');
+        var bookName = urlParams.get('title') || '在线阅读';
+        var backUrl = urlParams.get('back') || '';
+
+        document.getElementById('book-title').textContent = bookName;
+        document.getElementById('pdf-frame').src = pdfUrl;
+
+        function goBack() {
+            if (backUrl) {
+                window.location.href = backUrl;
+            } else if (window.history.length > 1) {
+                window.history.back();
+            } else {
+                window.close();
+            }
+        }
+    </script>
+</body>
+</html>
+

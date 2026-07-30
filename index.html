@@ -1,0 +1,176 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>马克思主义学习知识库</title>
+    <style>@font-face {
+    font-family: 'STZhongsong';
+    src: local('华文中宋'), local('STZhongsong');
+}
+body {
+    font-family: 'STZhongsong', '华文中宋', 'SimSun', '宋体', serif;
+    line-height: 1.8;
+    margin: 0;
+    padding: 0;
+    background-color: #fff8e1;
+    color: #333;
+}
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+.content {
+    background-color: rgba(255, 255, 255, 0.95);
+    border-radius: 12px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+    padding: 35px;
+    margin-top: 30px;
+    border-top: 4px solid #ffd54f;
+}
+.content h2 {
+    color: #c62828;
+    border-bottom: 3px solid #ffd54f;
+    padding-bottom: 12px;
+    font-size: 1.8em;
+}
+.content h3 {
+    color: #d32f2f;
+    margin-top: 25px;
+}
+footer {
+    text-align: center;
+    margin-top: 50px;
+    padding: 25px;
+    background: linear-gradient(135deg, #333 0%, #1a1a1a 100%);
+    color: #ffd54f;
+}
+.course-list {
+    list-style-type: none;
+    padding: 0;
+}
+.course-list li {
+    margin: 12px 0;
+    padding: 18px 20px;
+    background: linear-gradient(135deg, #fff8e1 0%, #fff3e0 100%);
+    border-radius: 8px;
+    border-left: 5px solid #d32f2f;
+    transition: all 0.3s;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+.course-list li:hover {
+    transform: translateX(5px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+.course-list a {
+    color: #333;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1em;
+}
+.course-list a:hover {
+    color: #c62828;
+}
+.hero-section {
+    background-image: url('images/leaders.png');
+    background-size: cover;
+    background-position: center 20%;
+    background-repeat: no-repeat;
+    position: relative;
+    min-height: 400px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.hero-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(198, 40, 40, 0.85) 0%, rgba(211, 47, 47, 0.9) 100%);
+    z-index: 0;
+}
+.hero-content {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    color: #ffd54f;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+.hero-content h1 {
+    font-size: 3.2em;
+    margin: 0 0 10px 0;
+    color: #ffd54f;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+.hero-content p {
+    font-size: 1.3em;
+    color: #ffe082;
+    margin: 0 0 20px 0;
+}
+.hero-content nav {
+    margin-top: 25px;
+}
+.hero-content nav a {
+    color: #ffd54f;
+    text-decoration: none;
+    margin: 0 25px;
+    font-size: 1.1em;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+.hero-content nav a:hover {
+    color: #fff;
+    text-shadow: 0 0 10px rgba(255,213,79,0.5);
+}</style>
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?3ff5335154d5fb31adb0732f8726eb63";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+</head>
+<body>
+    <div class="hero-section">
+        <div class="hero-content">
+            <h1>马克思主义学习知识库</h1>
+            <p>中国人民大学马克思主义学院 · 马克思主义理论专业</p>
+            <nav>
+                <a href="index.html">首页</a>
+                <a href="courses.html">课程资料</a>
+                <a href="about.html">关于</a>
+            </nav>
+        </div>
+    </div>
+    <div class="container">
+        <div class="content">
+            <h2>欢迎使用马克思主义学习知识库</h2>
+            <p>本知识库为马克思主义理论专业本科生提供课程学习资料，按学期和课程分类整理。</p>
+            <h3>课程资料</h3>
+            <ul class="course-list">
+                <li><a href="大一秋季/index.html?from=home">本科一年级秋季学期</a></li>
+                <li><a href="大一春季/index.html?from=home">本科一年级春季学期</a></li>
+                <li><a href="大二秋季/index.html?from=home">本科二年级秋季学期</a></li>
+            </ul>
+        </div>
+    </div>
+    <footer>
+        <div class="container">
+            <p>马克思主义学习知识库 &copy; 2026·手榴蛋出品</p>
+        </div>
+    </footer>
+</body>
+</html>
+
+
+
